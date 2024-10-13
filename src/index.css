@@ -1,13 +1,215 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+button {
+  outline: none;
+  border: none;
+}
+.main_Wrapper {
+  width: 962px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  text-align: center;
+  font-weight: 500;
+  width: 100%;
+}
+.desc {
+  color: #5a687d;
+}
+.pay_methods {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  padding: 1em 0;
+  border-bottom: 1px solid #ccd0d7;
+}
+.pay_methods button {
+  width: 186px;
+  height: 48px;
+  padding: 8px 16px 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #ccd0d7;
+  background-color: #fff;
+  outline: none;
+}
+form {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.icon-input {
+  width: 100%;
+  padding: 10px;
+  padding-left: 40px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+/* .card-number {
+  background: url("/assets/cardNumber.svg") no-repeat left center;
+  background-size: 20px 20px;
+  background-position: 10px center;
+}
+
+.card-holder {
+  background: url("/assets/cardHolder.svg") no-repeat left center;
+  background-size: 20px 20px;
+  background-position: 10px center;
+} */
+.container_inputs {
+  display: flex;
+  justify-content: space-between;
+}
+.price {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: #404a59;
+}
+.btns {
+  margin-left: auto;
+}
+.sub_btns {
+  width: 240px;
+  height: 64px;
+  padding: 11px 60px 11px 60px;
+  gap: 10px;
+  border-radius: 12px;
+  /* font-family: Poppins; */
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+}
+.confirm {
+  background: linear-gradient(
+    114.88deg,
+    #007f7a 1.73%,
+    #009e9d 46.83%,
+    #00babe 96.44%,
+    #00ced6 143.79%,
+    #00dbe4 188.89%,
+    #00dfe9 227.23%
+  );
+  color: #ffffff;
+}
+.cancel {
+  color: #6c7a7a;
+  margin: 0 1em 1em 0;
+  border: 1px solid #6c7a7a;
+  background-color: #ffffff;
+}
+@media (max-width: 987px) {
+  .main_Wrapper {
+    width: 96%;
+  }
+  .pay_methods {
+    flex-wrap: wrap;
+  }
+}
+.payment-form {
+  max-width: 100%;
+  padding: 20px;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-group label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.input-group input,
+input::placeholder {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  color: #333;
+}
+
+.input-group .icon-card {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #666;
+}
+
+.input-row {
+  display: flex;
+  gap: 16px;
+}
+
+.input-row .input-group {
+  flex: 1;
+}
+
+.total-price {
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  color: #333;
+}
+
+.button-row {
+  display: flex;
+  gap: 16px;
+}
+
+.cancel-btn {
+  padding: 12px 24px;
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #666;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.confirm-btn {
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #00c9b7 0%, #00a6b7 100%);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.confirm-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
 }
