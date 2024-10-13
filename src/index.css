@@ -66,6 +66,11 @@ form {
   border: 1px solid #ccc;
   border-radius: 10px;
 }
+.card-input-container {
+  padding: 20px;
+  border: #9ca0a5 solid 2px !important;
+  border-radius: 10px !important;
+}
 /* .card-number {
   background: url("/assets/cardNumber.svg") no-repeat left center;
   background-size: 20px 20px;

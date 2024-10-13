@@ -68,13 +68,16 @@ const PaymentScreen = () => {
   const CARD_ELEMENT_OPTIONS = {
     style: {
       base: {
+        fontSize: "16px",
         color: "#32325d",
         fontFamily: '"Poppins", sans-serif',
-        fontSmoothing: "antialiased",
-        fontSize: "16px",
         "::placeholder": {
           color: "#aab7c4",
         },
+        // Add your border and border-radius here
+        border: "2px solid #404a59",
+        borderRadius: "10px",
+        padding: "10px", // Ensure proper padding
       },
       invalid: {
         color: "#fa755a",
@@ -114,23 +117,15 @@ const PaymentScreen = () => {
               <i className="icon-card"></i>
               Card Number
             </label>
-            <CardElement
-              id="card-number"
-              options={{
-                style: {
-                  base: {
-                    fontSize: "16px",
-                    padding: "20px",
-                    color: "#32325d",
-                    "::placeholder": {
-                      color: "#aab7c4",
-                    },
-                  },
-                },
-              }}
-            />
+            {/* <CardElement id="card-number" options={CARD_ELEMENT_OPTIONS} /> */}
+            <div className="card-input-container">
+              <CardElement options={CARD_ELEMENT_OPTIONS} />
+            </div>
           </div>
-
+          {/* <p class="price">
+            <span>Total Price</span>
+            <span>€325.00</span>
+          </p> */}
           <div className="button-row">
             <button
               onClick={handlePayment}
